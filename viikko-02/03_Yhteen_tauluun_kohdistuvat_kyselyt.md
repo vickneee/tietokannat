@@ -15,7 +15,7 @@ Tee kysely, joka tulostaa nimen ja tyypin kaikista Suomessa sijaitsevista lentok
 ```sql
 SELECT name, type 
 FROM airport 
-WHERE country = 'FI';
+WHERE iso_country = 'FI';
 ```
 ![Screenshot3_2](Screenshot3_2.png)
 

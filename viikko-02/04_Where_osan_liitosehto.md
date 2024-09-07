@@ -68,7 +68,8 @@ Minkä nimisellä lentokentällä Ilkka on?
 ```sql
 SELECT name 
 FROM airport, game 
-WHERE ident = location AND screen_name = 'Ilkka';
+WHERE ident = location 
+AND screen_name = 'Ilkka';
 ```
 ![Screenshot4_6](Screenshot4_6.png)
 
