@@ -4,7 +4,8 @@
 
 Tee kysely, joka tulostaa kaikki sarakkeet goal-talusta.
 ```sql
-SELECT * FROM goal;
+SELECT * 
+FROM goal;
 ```
 ![Screenshot3_1](Screenshot3_1.png)
 
@@ -12,7 +13,9 @@ SELECT * FROM goal;
 
 Tee kysely, joka tulostaa nimen ja tyypin kaikista Suomessa sijaitsevista lentokentistä. Suomen maatunnus on: FI.
 ```sql
-SELECT name, type FROM airport WHERE country = 'FI';
+SELECT name, type 
+FROM airport 
+WHERE country = 'FI';
 ```
 ![Screenshot3_2](Screenshot3_2.png)
 
@@ -20,7 +23,9 @@ SELECT name, type FROM airport WHERE country = 'FI';
 
 Tee kysely, joka tulostaa suomalaisten lentokenttien nimet aakkosjärjestyksessä. Suomen maatunnus: FI
 ```sql
-SELECT name FROM airport WHERE country = 'FI' ORDER BY name;
+SELECT name 
+FROM airport 
+WHERE country = 'FI' ORDER BY name;
 ```
 ![Screenshot3_3](Screenshot3_3.png)
 
@@ -28,7 +33,9 @@ SELECT name FROM airport WHERE country = 'FI' ORDER BY name;
 
 Tee kysely, joka tulostaa nimen ja tyypin kaikista Suomessa sijaitsevista lentokentistä. Järjestä tulos ensisijaisesti tyypin mukaan ja toissijaisesti nimen mukaan.
 ```sql
-SELECT name, type FROM airport WHERE iso_country = 'FI' ORDER BY type, name;
+SELECT name, type 
+FROM airport 
+WHERE iso_country = 'FI' ORDER BY type, name;
 ```
 ![Screenshot3_4](Screenshot3_4.png)
 
@@ -36,7 +43,9 @@ SELECT name, type FROM airport WHERE iso_country = 'FI' ORDER BY type, name;
 
 Tee kysely, joka tulostaa kaikki F-kirjaimella alkavat maan nimet country-taulusta.
 ```sql
-SELECT name FROM country WHERE name LIKE 'F%';
+SELECT name 
+FROM country 
+WHERE name LIKE 'F%';
 ```
 ![Screenshot3_5](Screenshot3_5.png)
 
@@ -45,7 +54,9 @@ SELECT name FROM country WHERE name LIKE 'F%';
 Tee kysely, joka tulostaa kaikki country-taulun maiden nimet, joissa esiintyy F-kirjain.
 
 ```sql
-SELECT name FROM country WHERE name LIKE '%F%';
+SELECT name 
+FROM country 
+WHERE name LIKE '%F%';
 ```
 ![Screenshot3_6](Screenshot3_6.png)
 
@@ -53,7 +64,9 @@ SELECT name FROM country WHERE name LIKE '%F%';
 
 Missä locationissa Vesa sijaitsee?
 ```sql
-SELECT location FROM game WHERE screen_name = 'Vesa';
+SELECT location 
+FROM game 
+WHERE screen_name = 'Vesa';
 ```
 ![Screenshot3_7](Screenshot3_7.png)
 
@@ -61,7 +74,9 @@ SELECT location FROM game WHERE screen_name = 'Vesa';
 
 Kuinkan paljon Ilkka on kuluttanut CO2 budjettia?
 ```sql
-SELECT co2_consumed FROM game WHERE screen_name = 'Ilkka';
+SELECT co2_consumed 
+FROM game 
+WHERE screen_name = 'Ilkka';
 ```
 ![Screenshot3_8](Screenshot3_8.png)
 
@@ -69,6 +84,7 @@ SELECT co2_consumed FROM game WHERE screen_name = 'Ilkka';
 
 Kuinka paljon alkuperäinen CO2 budjetti on (tulosta CO2 budjetin arvo vain kerran)?
 ```sql
-SELECT DISTINCT co2_budget FROM game;
+SELECT DISTINCT co2_budget 
+FROM game;
 ```
 ![Screenshot3_9](Screenshot3_9.png)
