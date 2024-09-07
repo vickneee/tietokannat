@@ -106,7 +106,7 @@ WHERE ident = location
 AND game.id = game_id 
 AND goal.id = goal_id 
 AND screen_name = 'Ilkka' 
-AND goal.name = 'clouds';
+AND goal.name = 'CLOUDS';
 ```
 ![Screenshot4_9](Screenshot4_9.png)
 
@@ -121,6 +121,6 @@ AND ident = location
 AND game.id = game_id 
 AND goal.id = goal_id 
 AND screen_name = 'Ilkka' 
-AND goal.name = 'clouds';
+AND goal.name = 'CLOUDS';
 ```
 ![Screenshot4_10](Screenshot4_10.png)
