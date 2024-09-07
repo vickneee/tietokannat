@@ -5,6 +5,7 @@
 Luettele suomalaiset lentokentät, joilla on aikataulutettuja palveluja. Lopputulokseen halutaan sekä maan nimi että lentokentän nimi.
 
 Vihje 1: Tarvittava maan nimi on ”Finland”.
+
 Vihje 2: Kahdesta sanasta koostuvaan aliakseen tarvitset lainausmerkit ympärille.
 ```sql
 SELECT country.name AS 'country name', airport.name AS 'airport name'
