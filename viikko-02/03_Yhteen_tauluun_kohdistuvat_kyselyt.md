@@ -21,7 +21,7 @@ WHERE iso_country = 'FI';
 
 ### Tehtävä 3
 
-Tee kysely, joka tulostaa suomalaisten lentokenttien nimet aakkosjärjestyksessä. Suomen maatunnus: FI
+Tee kysely, joka tulostaa suomalaisten lentokenttien nimet aakkosjärjestyksessä. Suomen maatunnus: FI.
 ```sql
 SELECT name 
 FROM airport 
