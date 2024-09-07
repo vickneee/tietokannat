@@ -25,7 +25,7 @@ Tee kysely, joka tulostaa suomalaisten lentokenttien nimet aakkosj√§rjestyksess√
 ```sql
 SELECT name 
 FROM airport 
-WHERE country = 'FI' ORDER BY name;
+WHERE iso_country = 'FI' ORDER BY name;
 ```
 ![Screenshot3_3](Screenshot3_3.png)
 
