@@ -8,10 +8,10 @@ Vihje 1: Tarvittava maan nimi on ”Finland”.
 
 Vihje 2: Kahdesta sanasta koostuvaan aliakseen tarvitset lainausmerkit ympärille.
 ```sql
-SELECT country.name AS 'country name', airport.name AS 'airport name'
-FROM country, airport
-WHERE country.name = 'Finland' 
-AND scheduled_service = 'yes';
+SELECT country.name AS "country name", airport.name AS "airport name"
+FROM country INNER JOIN airport ON country.iso_country = airport.iso_country
+WHERE country.name = "Finland" 
+AND scheduled_service = "yes";
 ```
 ![Screenshot5_1](Screenshot5_1.png)
 
