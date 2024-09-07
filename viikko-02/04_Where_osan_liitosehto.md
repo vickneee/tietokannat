@@ -54,9 +54,10 @@ WHERE location = ident AND screen_name = 'Heini';
 
 Kuinka korkealla Heini on paraikaa merenpinnasta mitattuna? Anna tulos metreissä, ja anna tulokselle alias elevation_m. Yksi jalka on 0,3048 metriä. Älä käytä muuttujaa. Voit kuitenkin tehdä laskutoimituksen ilman muuttujaa.
 ```sql
-SELECT name 
-FROM country 
-WHERE name LIKE 'F%';
+SELECT elevation_ft * 0.3048 AS elevation_m
+FROM airport, game
+WHERE location = ident 
+AND screen_name = "Heini";
 ```
 ![Screenshot4_5](Screenshot4_5.png)
 
