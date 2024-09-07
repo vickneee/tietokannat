@@ -53,6 +53,8 @@ WHERE name LIKE '%Hels%';
 Luettele kaikki säätilatavoitteiden nimet ja pelaajan nimi, jos pelaaja on sen saavuttanut.
 ```sql
 SELECT goal.name, screen_name
-FROM goal LEFT JOIN goal_reached ON goal.id = goal_id LEFT JOIN game ON game.id = game_id;
+FROM goal 
+LEFT JOIN goal_reached ON goal.id = goal_id 
+LEFT JOIN game ON game.id = game_id;
 ```
 ![Screenshot5_5](Screenshot5_5.png)
