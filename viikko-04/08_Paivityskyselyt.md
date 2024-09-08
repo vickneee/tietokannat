@@ -22,10 +22,12 @@ Game-taulun sisältä näyttää päivituksen jälkeen seuraavalta:
 Ja nyt alustetaan oma tietokanta valmiiksi projektin kannalta. Eli poistetaan kaikki pelin tilaan liittyvä testidata. Viite-eheyden takia pystyt poistamaan datan vain fiksussa järjestyksessä.
 
 Täytyykö sinun poistaa ensin data game-taulusta vai goal_reached taulusta?
+
 a) goal_reached
+
 b) game
 
-Vastaus a) goal_reached
+Vastaus: a) goal_reached
 
 ### Tehtävä 3
 
