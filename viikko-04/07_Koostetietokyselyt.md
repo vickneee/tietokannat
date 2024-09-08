@@ -1,9 +1,20 @@
 # Koostetietokyselyt
 
 ### Tehtävä 1
-SELECT * FROM esimerkki 
-![ruudunkaappaus](kuvatiedoston-nimi.png)
+
+Kuinka korkealla sijaitsee korkeimmalla sijaitseva lentokenttä?
+```sql
+SELECT MAX(elevation_ft)
+FROM airport;
+```
+![Screenshot7_1](Screenshot7_1.png)
 
 ### Tehtävä 2
-SELECT * FROM esimerkki WHERE kentta = 'arvo' 
-![ruudunkaappaus](kuvatiedoston-nimi.png)
+
+Tee kysely, joka listaa kunkin maanosan, ja niissä sijaitsevien maiden määrän.
+```sql
+SELECT continent, count(*)
+FROM country
+GROUP BY continent;
+```
+![Screenshot7_2](Screenshot7_2.png)
