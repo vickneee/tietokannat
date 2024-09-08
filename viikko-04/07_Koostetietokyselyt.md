@@ -59,3 +59,50 @@ LIMIT 50;
 ![Screenshot7_5](Screenshot7_5.png)
 
 ### Tehtävä 6
+
+Tulosta niiden maiden nimi, joissa on yli 1000 lentokenttää.
+
+Vihje: Tee ryhmittely iso_country-kentän avulla. (Ei maan nimellä)
+```sql
+SELECT country.name
+FROM airport, country
+WHERE airport.iso_country = country.iso_country
+GROUP BY country.iso_country
+HAVING count(*) > 1000;
+```
+![Screenshot7_6](Screenshot7_6.png)
+
+### Tehtävä 7
+
+Minkä niminen on maailman korkeimmalla sijaitseva lentokenttä?
+
+Vihje1: Älä käytä desc limit, jos meillä on useampi lentokenttä yhtä korkealla; desc limit poimii niistä vain yhden. Me haluamme kaikki korkeimmalla sijaitsevat lentokentät.
+
+Vihje2: Vaikka kysely kohdistuu yhteen tauluun tarvitset sisäkyselyä.
+```sql
+SELECT name
+FROM airport
+WHERE elevation_ft in(
+    SELECT max(elevation_ft)
+    FROM airport
+);
+```
+![Screenshot7_7](Screenshot7_7.png)
+
+### Tehtävä 8
+
+Missä maassa sijaitsee maailman korkeimmalla oleva lentokenttä?
+
+Vihje1: Älä käytä desc limit, jos meillä on useampi lentokenttä yhtä korkealla; desc limit poimii niistä vain yhden. Me haluamme kaikki korkeimmalla sijaitsevien lentokenttien maat.
+
+Vihje 2: Sisäkyselyt ovat käteviä tähän.
+```sql
+SELECT country.name
+FROM airport, country
+WHERE airport.iso_country = country.iso_country
+AND elevation_ft in(
+    SELECT max(elevation_ft)
+    FROM airport
+);
+```
+![Screenshot7_8](Screenshot7_8.png)
