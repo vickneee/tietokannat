@@ -8,21 +8,6 @@ Vihje1: Tarvitset sisäkyselyn selvittääksesi Nottingham Airportin identin.
 ```sql
 UPDATE game
 SET location = (
-    SELECT id
-    FROM airport
-    WHERE name = "Nottingham Airport"
-), co2_consumed = co2_consumed + 500
-WHERE screen_name = "Vesa";
-```
-If you run the query above, you will get the following error message:
-
-ERROR 1452 (23000): Cannot add or update a child row: a foreign key constraint fails (`flight_game`.`game`, CONSTRAINT `game_ibfk_1` FOREIGN KEY (`location`) REFERENCES `airport` (`ident`))
-
-change the column name from id to ident in the subquery:
-
-```sql
-UPDATE game
-SET location = (
     SELECT ident
     FROM airport
     WHERE name = "Nottingham Airport"
@@ -33,5 +18,27 @@ Game-taulun sisältä näyttää päivituksen jälkeen seuraavalta:
 ![Screenshot8_1](Screenshot8_1.png)
 
 ### Tehtävä 2
-SELECT * FROM esimerkki WHERE kentta = 'arvo' 
-![ruudunkaappaus](kuvatiedoston-nimi.png)
+
+Ja nyt alustetaan oma tietokanta valmiiksi projektin kannalta. Eli poistetaan kaikki pelin tilaan liittyvä testidata. Viite-eheyden takia pystyt poistamaan datan vain fiksussa järjestyksessä.
+
+Täytyykö sinun poistaa ensin data game-taulusta vai goal_reached taulusta?
+a) goal_reached
+b) game
+
+Vastaus a) goal_reached
+
+### Tehtävä 3
+
+Poista data goal_reahed-taulusta.
+```sql
+DELETE FROM goal_reached;
+```
+Taulun sisältö näyttää seuraavalta:
+```sql
+MySQL [flight_game]>
+MySQL [flight_game]> SELECT * FROM goal_reached;
+id          game_id     goal_id
+----------  ----------  ----------
+```
+
+
