@@ -42,4 +42,17 @@ id          game_id     goal_id
 ----------  ----------  ----------
 ```
 
+### Tehtävä 4
 
+Poista data game-taulusta
+```sql
+DELETE FROM game;
+```
+Taulun sisältö näyttää seuraavalta:
+```sql
+ SELECT * FROM game;
+```
+```sql
+id          screen_name  location    co2_consumed
+----------  -----------  ----------  ------------
+```
