@@ -1,3 +1,3 @@
 # Tietokannat
 
-Metropolia UAS tietokannan tehtävät. 
+Metropolia UAS Flight Game tietokannan tehtävät. 
