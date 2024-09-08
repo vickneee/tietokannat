@@ -35,9 +35,7 @@ DELETE FROM goal_reached;
 ```
 Taulun sisältö näyttää seuraavalta:
 ```sql
-MySQL [flight_game]>
-MySQL [flight_game]> SELECT * FROM goal_reached;
-Empty set (0.00 sec)
+ SELECT * FROM goal_reached;
 ```
 ```sql
 id          game_id     goal_id
