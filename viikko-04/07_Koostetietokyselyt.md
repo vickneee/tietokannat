@@ -4,7 +4,7 @@
 
 Kuinka korkealla sijaitsee korkeimmalla sijaitseva lentokenttä?
 ```sql
-SELECT MAX(elevation_ft)
+SELECT max(elevation_ft)
 FROM airport;
 ```
 ![Screenshot7_1](Screenshot7_1.png)
