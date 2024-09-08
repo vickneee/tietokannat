@@ -106,3 +106,29 @@ AND elevation_ft in(
 );
 ```
 ![Screenshot7_8](Screenshot7_8.png)
+
+### Tehtävä 9
+
+Kuinka monta säätilatavoitetta Vesa on saavuttanut?
+```sql
+SELECT count(*)
+FROM game, goal_reached
+WHERE id = game_id AND screen_name = 'Vesa'
+GROUP BY screen_name;
+```
+![Screenshot7_9](Screenshot7_9.png)
+
+### Tehtävä 10
+
+Mikä on lähimpänä napa-alueita olevan lentokentän nimi?
+
+Vihje: Latitude on 0 molemmissa navoissa.
+```sql
+SELECT name
+FROM airport
+WHERE latitude_deg in(
+    SELECT min(latitude_deg)
+    FROM airport
+);
+```
+![Screenshot7_10](Screenshot7_10.png)
