@@ -1,3 +1,3 @@
 # Tietokannat
 
-Metropolia UAS tietokannat tehtävät. 
+Metropolia UAS tietokannan tehtävät. 
